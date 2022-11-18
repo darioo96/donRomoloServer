@@ -1,0 +1,19 @@
+### create user
+PUT   http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Ailen Duran",
+    "age": "19",
+    "email": "lenduran01@gmail.com"
+}
+
+### get all users
+GET http://localhost:9000/api/users HTTP/1.1
+
+{}
+
+### find user
+GET http://localhost:9000/api/users/637801ac1b8fd430bdd7e95f HTTP/1.1
+
+{}

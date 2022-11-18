@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const userRoutes = require("./routes/users")
 
 const app = express();
 const port = process.env.PORT || 9000;
@@ -9,6 +10,10 @@ const MONGOHOST = process.env.MONGOHOST;
 const MONGOPASSWORD = process.env.MONGOPASSWORD;
 const MONGOPORT = process.env.MONGOPORT;
 const MONGOUSER = process.env.MONGOUSER;
+
+// middleware
+app.use(express.json());
+app.use("/api", userRoutes);
 
 //routes
 app.get("/", (req, res) => {
